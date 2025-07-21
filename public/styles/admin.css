@@ -1,0 +1,163 @@
+:root {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --card-color: #1e293b;
+  --accent-color: #6366f1;
+  --border-radius: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+}
+a{
+  text-decoration: none;
+}
+header a {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--card-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.vote-options div {
+  display: flex;
+  justify-content: space-between;
+  background-color: #334155;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+.vote-options div:hover {
+  background-color: #475569;
+}
+
+/* ریسپانسیو */
+@media (max-width: 600px) {
+  main {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem 1.2rem;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+.vote-options div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #334155;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+  gap: 1rem;
+  position: relative;
+}
+
+.vote-options div:hover {
+  background-color: #475569;
+}
+
+.delete-btn {
+  background-color: #dc2626; /* قرمز */
+  color: white;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
