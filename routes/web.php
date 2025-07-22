@@ -12,6 +12,7 @@ Route::get("/login", [UserController::class, "loginView"])->name("loginView");
 Route::post("/login", [UserController::class, "login"])->name("login");
 Route::get("/register", [UserController::class, "registerView"])->name("registerView");
 Route::post("/register", [UserController::class, "register"])->name("register");
+// vote increament
 Route::get('/vote/{id}', [HomeController::class, "voteIncreament"])->name('vote.inc');
 
 Route::prefix("admin")->middleware("isadmin")->group(function () {
